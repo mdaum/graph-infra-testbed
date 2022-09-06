@@ -11,7 +11,9 @@ if (process.env.LOAD_ENV) {
   });
 }
 
-export const integrationConfig: IntegrationConfig = {};
+export const integrationConfig: IntegrationConfig = {
+  wontUse: 'okay',
+};
 
 export function buildStepTestConfigForStep(stepId: string): StepTestConfig {
   return {
