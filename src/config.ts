@@ -3,9 +3,15 @@ import {
   IntegrationInstanceConfig,
 } from '@jupiterone/integration-sdk-core';
 
-export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {};
+export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
+  wontUse: {
+    type: 'string',
+  },
+};
 
-export type IntegrationConfig = IntegrationInstanceConfig;
+export interface IntegrationConfig extends IntegrationInstanceConfig {
+  wontUse: string;
+}
 
 export function validateInvocation() {
   return Promise.resolve();
