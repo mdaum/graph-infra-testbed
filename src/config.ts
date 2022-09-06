@@ -5,7 +5,7 @@ import {
 
 export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {};
 
-export type IntegrationConfig = IntegrationInstanceConfig;
+export interface IntegrationConfig extends IntegrationInstanceConfig {}
 
 export function validateInvocation() {
   return Promise.resolve();
